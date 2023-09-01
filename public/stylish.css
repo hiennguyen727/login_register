@@ -1,0 +1,29 @@
+body{
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.createbtn {
+    color: rgb(1, 1, 1);
+    background-color: #f0c14b;
+    border: 4px solid black;
+    padding: 20px x 40px;
+    text-align: center;
+    display: inline-flex;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+
+#newUserInfo{
+    border: rgb(1, 1, 1);
+    padding: 50px;
+    font-size: 15;
+    }

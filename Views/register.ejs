@@ -25,7 +25,7 @@
                     </p>
                     <% } %>
                     <div>
-                            <h1>Create a Account</h1>
+                            <h1>Create Account</h1>
                             <% if (typeof successMessage !=='undefined' ) { %>
                                 <p style="color: green;">
                                     <%= successMessage %>
@@ -33,19 +33,19 @@
                                 <% } %>
 
                                     <% { %>
-                                        <strong>Your Name</strong> <br>
+                                        <label>Your Name</label> <br>
                                         <input type="text" class="blue" name="yourName" placeholder="First and last name" />
                                         <br><br>
-                                        <strong>Email</strong> <br>
+                                        <label>Email</label> <br>
                                         <input type="email" name="email" />
                                         <br><br>
-                                        <strong>Username</strong><br>
+                                        <label>Username</label><br>
                                         <input type="text" name="username" />
                                         <br><br>
-                                        <strong>Password</strong> <br>
+                                        <label>Password</label> <br>
                                         <input type="password" name="password" placeholder="at least 8 characters" />
                                         <br><br>
-                                        <strong>Re-password</strong> <br>
+                                        <label>Re-password</label> <br>
                                         <input type="password" name="reenterpassword" />
                                         <br><br>
 
@@ -54,10 +54,11 @@
                         </div>
             </div>
             <div id="submitButton">
-            </div>
+            </div id="pie">
             <div id="apple">
                 Already have an account?<a href="http://localhost:3000/login">Sign In ▸</a>
             </div>
+        
         </div>
     </form>
     <!-- <footer>
@@ -71,8 +72,8 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <div id="footer-links">
-                <a href="https://tinyurl.com/2hv3p954">Help</a> <a href="https://tinyurl.com/yc8h2pxt">Conditions of
-                    Use</a> <a href="https://tinyurl.com/mr2ru4vb">Privacy Notice</a>
+                <a class="footerA" href="https://tinyurl.com/2hv3p954">Help</a> <a class="footerA" href="https://tinyurl.com/yc8h2pxt">Conditions of
+                    Use</a> <a class="footerA" href="https://tinyurl.com/mr2ru4vb">Privacy Notice</a>
             </div>
             <div id="footer-text">
                 © 1996-2023, Amazon.com, Inc. or its affiliates
