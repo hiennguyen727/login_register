@@ -16,7 +16,8 @@
 
     <form action="/register" method="post">
         <link rel="stylesheet" href="/logininpageimbd/styles.css ">
-        <img id="imdbLogo" src="https://m.media-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB667618033_.png">
+        <img id="imdbLogo"
+            src="https://m.media-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB667618033_.png">
         <div id="registrationBox">
             <div id="newUserInfo">
                 <% if (typeof errorMessage !=='undefined' ) { %>
@@ -24,7 +25,7 @@
                         <%= errorMessage %>
                     </p>
                     <% } %>
-                    <div>
+                        <div>
                             <h1>Create Account</h1>
                             <% if (typeof successMessage !=='undefined' ) { %>
                                 <p style="color: green;">
@@ -34,46 +35,42 @@
 
                                     <% { %>
                                         <label>Your Name</label> <br>
-                                        <input type="text" class="blue" name="yourName" placeholder="First and last name" />
+                                        <input required type="text" class="blue" name="yourName"
+                                            placeholder="First and last name" />
                                         <br><br>
                                         <label>Email</label> <br>
-                                        <input type="email" name="email" />
+                                        <input required type="email" name="email" />
                                         <br><br>
                                         <label>Username</label><br>
-                                        <input type="text" name="username" />
+                                        <input required type="text" name="username" />
                                         <br><br>
                                         <label>Password</label> <br>
-                                        <input type="password" name="password" placeholder="at least 8 characters" />
+                                        <input required type="password" name="password" placeholder="at least 8 characters" />
                                         <br><br>
                                         <label>Re-password</label> <br>
-                                        <input type="password" name="reenterpassword" />
+                                        <input required type="password" name="reenterpassword" />
                                         <br><br>
+                                        <!-- Add this to your register.ejs file -->
 
                                         <% } %>
-                                        <input type="submit" class="createbtn" value="Create your IMDb account" />
+                                            <input id="createbtn" type="submit"  value="Create your IMDb account" />
                         </div>
             </div>
-            <div id="submitButton">
-            </div id="pie">
             <div id="apple">
                 Already have an account?<a href="http://localhost:3000/login">Sign In ▸</a>
             </div>
-        
+
         </div>
     </form>
-    <!-- <footer>
-        <div class="card border-dark mb-3" style="max-width: 18rem;">
-            <div class="card-">
-                <a href="helpLink">Help</a> <a href="COULink">Conditions of Use</a> <a href="PNLink">Privacy Notice</a>
-              <p class="card-text">© 1996-2023, Amazon.com, Inc. or its affiliates</p>
-            </div>
-          </div>
-    </footer> -->
     <footer class="footer">
         <div class="content has-text-centered">
             <div id="footer-links">
-                <a class="footerA" href="https://tinyurl.com/2hv3p954">Help</a> <a class="footerA" href="https://tinyurl.com/yc8h2pxt">Conditions of
-                    Use</a> <a class="footerA" href="https://tinyurl.com/mr2ru4vb">Privacy Notice</a>
+                <span class="footer-seperator"></span>
+                <a class="a-link" href="https://tinyurl.com/2hv3p954">Help</a>
+                <span class="footer-seperator"></span>
+                <a class="a-link" href="https://tinyurl.com/yc8h2pxt">Conditions of Use</a>
+                <span class="footer-seperator"></span>
+                <a class="a-link" href="https://tinyurl.com/mr2ru4vb">Privacy Notice</a>
             </div>
             <div id="footer-text">
                 © 1996-2023, Amazon.com, Inc. or its affiliates

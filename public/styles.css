@@ -87,8 +87,19 @@ h1 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+footer{
+    width: 100%;
+}
+.a-link {
+    font-size: 11px;
+}
+.footer-seperator  {
+    display: inline-block;
+    width: 20px;
+}
 
-
-.footerA{
-    padding: 200px;
+#createbtn{
+    background-color: rgb(255, 216, 20);
+    border-color: rgb(252, 210, 0);
+    border-radius: 8px;
 }

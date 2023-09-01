@@ -8,6 +8,16 @@ body{
     justify-content: center;
     align-items: center;
 }
+div {
+    display: block;
+}
+.password-row {
+    width: 100%;
+}
+.password-label {
+    width: 40%;
+}
+
 
 
 .createbtn {
@@ -22,8 +32,16 @@ body{
 }
 
 
-#newUserInfo{
-    border: rgb(1, 1, 1);
-    padding: 50px;
-    font-size: 15;
+#submitNewUser{
+    border: 1px #ddd solid;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 13px;
+    line-height: 19px;
+    margin: 0;
+    width: 100%;
+    }
+
+    .hyper{
+        text-align: right
     }

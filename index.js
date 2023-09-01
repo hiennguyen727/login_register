@@ -97,27 +97,37 @@ app.get('/login', (req, res) => {
 });
 
 
-app.post('/login',async (req,res)=>{
-  const nameRegex = /^[A-Za-z]+$/; // Only letters
-  const usernameRegex = /^[A-Za-z0-9]+$/; // Letters and numbers
-  const minLength = 8;
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
 
-  const { yourName, email, username, password, reenterpassword } = req.body;
-    try {
-      await login.create({
-        
-        email,
-        
-        password, 
-        
-      });
+  try {
+    const user = await login.findOne({ where:{ email:email }});
 
-      res.render('login', { successMessage: 'Login successful' });
-    } catch (err) {
-      console.error(err);
-      res.status(500).render('login', { errorMessage: 'login failed' });
+    if (!user) {
+      return res.status(400).render('login', { errorMessage: 'Wrong email or password' });
     }
-  });
+console.log('ljljlkjljljljljlj',user)
+    // Use bcrypt.compare to compare the entered password with the hashed password
+    bcrypt.compare(password, user.password, async (err, result) => {
+      console.log('hihihihihh',password)
+      console.log('huhfghfhgf',user.password)
+      if (err) {
+        console.error(err);
+        return res.status(500).render('login', { errorMessage: 'Login failed' });
+      }
+
+      if (result) {
+        res.render('login', { successMessage: 'Login successful' });
+      } else {
+        res.status(400).render('login', { errorMessage: 'Wrong email or password' });
+      }
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).render('login', { errorMessage: 'Login failed' });
+  }
+});
+
 
 
 
