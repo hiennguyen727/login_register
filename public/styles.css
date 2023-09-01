@@ -1,8 +1,8 @@
-/* html, body {
+html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-  } */
+  }
   
   body {
     font-size: 13px;
@@ -63,4 +63,8 @@ footer{
 
 #submitNewUser{
     border-radius: 20px;
+}
+
+#imdbLogo {
+    
 }

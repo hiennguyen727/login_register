@@ -16,7 +16,7 @@
 
     <form action="/register" method="post">
         <link rel="stylesheet" href="/logininpageimbd/styles.css ">
-        alt="logo">
+        <img id="imdbLogo" src="https://m.media-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB667618033_.png">
         <div id="registrationBox">
             <div id="newUserInfo">
                 <% if (typeof errorMessage !=='undefined' ) { %>
@@ -25,7 +25,6 @@
                     </p>
                     <% } %>
                     <div>
-                        <img src="https://m.media-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB667618033_.png"
                             <h1>Create a Account</h1>
                             <% if (typeof successMessage !=='undefined' ) { %>
                                 <p style="color: green;">
@@ -34,27 +33,27 @@
                                 <% } %>
 
                                     <% { %>
-                                        Your Name <br>
-                                        <input type="text" class="blue" name="yourName" />
+                                        <strong>Your Name</strong> <br>
+                                        <input type="text" class="blue" name="yourName" placeholder="First and last name" />
                                         <br><br>
-                                        Email <br>
+                                        <strong>Email</strong> <br>
                                         <input type="email" name="email" />
                                         <br><br>
-                                        Username <br>
+                                        <strong>Username</strong><br>
                                         <input type="text" name="username" />
                                         <br><br>
-                                        Password <br>
-                                        <input type="password" name="password" />
+                                        <strong>Password</strong> <br>
+                                        <input type="password" name="password" placeholder="at least 8 characters" />
                                         <br><br>
-                                        Re-password <br>
+                                        <strong>Re-password</strong> <br>
                                         <input type="password" name="reenterpassword" />
                                         <br><br>
 
                                         <% } %>
+                                        <input type="submit" class="createbtn" value="Create your IMDb account" />
                         </div>
             </div>
             <div id="submitButton">
-                <input type="submit" class="createbtn" value="Create your IMDb account" />
             </div>
             <div>
                 Already have an account?<a href="https://tinyurl.com/3vv5hf7z">Sign In ▸</a>
