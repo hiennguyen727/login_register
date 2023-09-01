@@ -26,7 +26,7 @@
                     </p>
                     <% } %>
                         <div class="info_box">
-                            <h1>LOGIN</h1>
+                            <h1>SIGN IN</h1>
                             <% if (typeof successMessage !=='undefined' ) { %>
                                 <p style="color: green;">
                                     <%= successMessage %>
@@ -36,17 +36,15 @@
                                     <% { %>
                                         
                                         Email <br><input type="email" name="email" /><br><br>
-                                       
+                                       <p>Forgot your password?</p>
                                         Password <input type="password" name="password" /><br><br>
                                         <% } %>
                         </div>
             </div>
-            <input type="submit" class="createbtn" value="LOGIN" />
-
-            <button type="button" id="cr">Create your IMDb account</button>
-            <!-- <div>
-                Already have an account? <a href="">Sign in</a>
-            </div> -->
+            <input type="submit" class="createbtn" value="Sign IN" />
+            <div>
+                <p>Keep signed in. <a href=""><Details></Details></a></p>
+            </div>
         </div>
     </form>
    
