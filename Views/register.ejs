@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <form action="/register" method="post">
+        <link rel="stylesheet" href="/logininpageimbd/styles.css ">
+        alt="logo">
+        <div id="registrationBox">
+            <div id="newUserInfo">
+                <% if (typeof errorMessage !=='undefined' ) { %>
+                    <p style="color: red;">
+                        <%= errorMessage %>
+                    </p>
+                    <% } %>
+                    <div>
+                        <img src="https://m.media-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB667618033_.png"
+                            <h1>Create a Account</h1>
+                            <% if (typeof successMessage !=='undefined' ) { %>
+                                <p style="color: green;">
+                                    <%= successMessage %>
+                                </p>
+                                <% } %>
+
+                                    <% { %>
+                                        Your Name <br>
+                                        <input type="text" class="blue" name="yourName" />
+                                        <br><br>
+                                        Email <br>
+                                        <input type="email" name="email" />
+                                        <br><br>
+                                        Username <br>
+                                        <input type="text" name="username" />
+                                        <br><br>
+                                        Password <br>
+                                        <input type="password" name="password" />
+                                        <br><br>
+                                        Re-password <br>
+                                        <input type="password" name="reenterpassword" />
+                                        <br><br>
+
+                                        <% } %>
+                        </div>
+            </div>
+            <div id="submitButton">
+                <input type="submit" class="createbtn" value="Create your IMDb account" />
+            </div>
+            <div>
+                Already have an account?<a href="https://tinyurl.com/3vv5hf7z">Sign In ▸</a>
+            </div>
+        </div>
+    </form>
+    <!-- <footer>
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-">
+                <a href="helpLink">Help</a> <a href="COULink">Conditions of Use</a> <a href="PNLink">Privacy Notice</a>
+              <p class="card-text">© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+            </div>
+          </div>
+    </footer> -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <div id="footer-links">
+                <a href="https://tinyurl.com/2hv3p954">Help</a> <a href="https://tinyurl.com/yc8h2pxt">Conditions of
+                    Use</a> <a href="https://tinyurl.com/mr2ru4vb">Privacy Notice</a>
+            </div>
+            <div id="footer-text">
+                © 1996-2023, Amazon.com, Inc. or its affiliates
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
